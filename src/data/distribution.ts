@@ -24,7 +24,7 @@ export const platforms: Platform[] = [
 ]
 
 export const statusLabel: Record<PlatformStatus, string> = {
-  pending: 'Данные о размещении ожидаются',
+  pending: 'Ссылки на публикации будут добавлены',
   planned: 'Размещение запланировано',
   published: 'Опубликовано',
 }
