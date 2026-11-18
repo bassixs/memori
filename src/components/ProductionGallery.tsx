@@ -64,7 +64,8 @@ export function ProductionGallery() {
         <p className="eyebrow mb-6 text-choc/60">03 — Реализация</p>
         <div className="grid gap-8 lg:grid-cols-12 lg:gap-6">
           <h2 ref={heading} className="display text-[clamp(3rem,12.5vw,5rem)] lg:col-span-8 lg:text-[clamp(4.8rem,7.6vw,9.5rem)]">
-            От исторической идеи&nbsp;— <span className="serif-accent normal-case text-rust">к ожившим кадрам</span>
+            <span className="line-mask"><span data-line>От исторической идеи&nbsp;—</span></span>
+            <span className="line-mask pb-[0.16em] -mb-[0.1em]"><span data-line className="serif-accent normal-case text-rust">к ожившим кадрам</span></span>
           </h2>
           <p data-prod-lead className="max-w-md self-end text-[1.02rem] leading-relaxed text-choc/80 lg:col-span-4 lg:pb-3">
             {project.production.lead}

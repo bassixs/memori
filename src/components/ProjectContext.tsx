@@ -47,7 +47,8 @@ export function ProjectContext() {
           <div className="lg:col-span-8">
             <p className="eyebrow mb-6 text-cream/50">01 — Основа проекта</p>
             <h2 ref={heading} className="display text-[clamp(3.2rem,13vw,5rem)] lg:text-[clamp(5rem,8vw,10rem)]">
-              История, рассказанная <span className="serif-accent normal-case text-gold-soft">по-новому</span>
+              <span className="line-mask"><span data-line>История, рассказанная</span></span>
+            <span className="line-mask pb-[0.16em] -mb-[0.1em]"><span data-line className="serif-accent normal-case text-gold-soft">по-новому</span></span>
             </h2>
           </div>
           <p data-ctx-text className="max-w-md self-end text-[1.02rem] leading-relaxed text-cream/75 lg:col-span-4 lg:pb-3">

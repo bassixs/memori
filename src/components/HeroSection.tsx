@@ -8,10 +8,10 @@ import { scrollToId } from '../lib/deckBus'
 /** Коллаж из кадров всех четырёх роликов: позиция (% от области), ширина (% от области), угол, глубина */
 // Четыре обложки — по одной на ролик, слева направо 01 → 04, каскадом с разной высотой и наклоном
 const collage = [
-  { image: films[0].poster, pos: films[0].posterPosition, x: -4, y: 24, w: 36, r: -7, z: 2, from: { x: -130, y: 40, r: -30 } },
-  { image: films[1].poster, pos: films[1].posterPosition, x: 19, y: 2, w: 37, r: -2, z: 3, from: { x: -40, y: -120, r: -18 } },
-  { image: films[2].poster, pos: films[2].posterPosition, x: 43, y: 28, w: 36, r: 4, z: 4, from: { x: 40, y: 120, r: 20 } },
-  { image: films[3].poster, pos: films[3].posterPosition, x: 65, y: 8, w: 37, r: 9, z: 5, from: { x: 130, y: -30, r: 30 } },
+  { image: films[0].poster, pos: films[0].posterPosition, x: -4, y: 24, w: 36, r: -7, z: 2 },
+  { image: films[1].poster, pos: films[1].posterPosition, x: 19, y: 2, w: 37, r: -2, z: 3 },
+  { image: films[2].poster, pos: films[2].posterPosition, x: 43, y: 28, w: 36, r: 4, z: 4 },
+  { image: films[3].poster, pos: films[3].posterPosition, x: 65, y: 8, w: 37, r: 9, z: 5 },
 ]
 
 export function HeroSection() {
@@ -32,17 +32,8 @@ export function HeroSection() {
         tl.from(split.chars, { yPercent: 115, duration: 1.15, stagger: { each: 0.028, from: 'start' }, onComplete: () => split.revert() }, 0.05)
         tl.from('[data-hero-fade]', { yPercent: 100, autoAlpha: 0, duration: 1, stagger: 0.08 }, 0.55)
 
-        // 2. Изображения входят с разных направлений, 3. доворачиваются и стабилизируются
-        cards.forEach((card, i) => {
-          const c = collage[i]
-          tl.fromTo(
-            card,
-            { xPercent: c.from.x, yPercent: c.from.y, rotation: c.from.r, scale: 0.7, autoAlpha: 0 },
-            { xPercent: 0, yPercent: 0, rotation: c.r + (i % 2 ? 4 : -4), scale: 1, autoAlpha: 1, duration: 1.25, ease: 'settle' },
-            0.12 + i * 0.09,
-          )
-          tl.to(card, { rotation: c.r, duration: 1.1, ease: 'power3.inOut' }, 1.15 + i * 0.05)
-        })
+        // 2. Обложки мягко проявляются на своих местах
+        tl.fromTo(cards, { autoAlpha: 0, scale: 0.96 }, { autoAlpha: 1, scale: 1, duration: 1.2, ease: 'power2.out', stagger: 0.1 }, 0.25)
 
         // При прокрутке композиция перестраивается и «стекает» к колоде роликов
         const narrow = isNarrow()

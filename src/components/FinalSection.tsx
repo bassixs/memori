@@ -42,7 +42,8 @@ export function FinalSection() {
     <section ref={root} id="final" data-section="Финал" className="paper-grain relative overflow-x-clip bg-ink text-cream">
       <div className="mx-auto max-w-[1720px] px-4 pt-24 md:px-[4vw] md:pt-36">
         <h2 ref={heading} className="display text-center text-[clamp(3.6rem,17vw,6rem)] lg:text-[clamp(6rem,12vw,15rem)]">
-          История <span className="serif-accent normal-case text-gold-soft">продолжается.</span>
+          <span className="line-mask"><span data-line>История</span></span>
+            <span className="line-mask pb-[0.16em] -mb-[0.1em]"><span data-line className="serif-accent normal-case text-gold-soft">продолжается.</span></span>
         </h2>
 
         {/* Веер обложек */}

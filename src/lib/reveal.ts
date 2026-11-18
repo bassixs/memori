@@ -1,23 +1,21 @@
-import { gsap, SplitText } from './gsap'
+import { gsap } from './gsap'
 
 /**
- * Построчное появление заголовка через маску (SplitText, mask: 'lines').
- * После появления разбиение снимается (split.revert), чтобы при смене ширины
- * окна текст снова переносился естественно. Вызывается внутри useGSAP / matchMedia.
+ * Построчное появление заголовка через маску. Строки заданы в разметке
+ * (.line-mask > [data-line]), поэтому раскладка текста одинакова до, во время
+ * и после анимации — без перескоков. Вызывается внутри useGSAP / matchMedia.
  */
 export function revealLines(el: Element | null, opts: { trigger?: Element | null; start?: string; delay?: number } = {}) {
   if (!el) return
-  const split = SplitText.create(el, { type: 'lines', mask: 'lines', linesClass: 'split-line' })
-  return gsap.from(split.lines, {
+  const lines = el.querySelectorAll('[data-line]')
+  if (!lines.length) return
+  return gsap.from(lines, {
     yPercent: 108,
-    rotation: 2.5,
-    transformOrigin: '0% 100%',
     duration: 1.1,
     ease: 'expo.out',
-    stagger: 0.08,
+    stagger: 0.09,
     delay: opts.delay ?? 0,
     scrollTrigger: { trigger: opts.trigger ?? el, start: opts.start ?? 'top 82%', once: true },
-    onComplete: () => split.revert(),
   })
 }
 
