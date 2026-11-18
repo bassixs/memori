@@ -54,6 +54,52 @@ export function HeroSection() {
         scrollTl.to(title.current, { yPercent: -18, ease: 'none' }, 0)
         scrollTl.to('[data-hero-fade]', { autoAlpha: 0, y: -40, ease: 'none' }, 0)
       })
+
+      // Реакция на курсор: умеренный параллакс по глубине + подъём карточки под мышью
+      mm.add('(prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine)', () => {
+        const tilts = gsap.utils.toArray<HTMLElement>('[data-hero-tilt]')
+        const wraps = gsap.utils.toArray<HTMLElement>('[data-hero-wrap]')
+        const depth = [0.7, 1.1, 0.85, 1.3]
+        const q = tilts.map((el) => ({
+          x: gsap.quickTo(el, 'x', { duration: 0.9, ease: 'power3' }),
+          y: gsap.quickTo(el, 'y', { duration: 0.9, ease: 'power3' }),
+          r: gsap.quickTo(el, 'rotation', { duration: 1.1, ease: 'power3' }),
+        }))
+        const onMove = (e: PointerEvent) => {
+          const nx = e.clientX / window.innerWidth - 0.5
+          const ny = e.clientY / window.innerHeight - 0.5
+          q.forEach((f, i) => {
+            f.x(nx * 34 * depth[i])
+            f.y(ny * 24 * depth[i])
+            f.r(nx * 2.4 * depth[i])
+          })
+        }
+        const onLeave = () => q.forEach((f) => (f.x(0), f.y(0), f.r(0)))
+        const section = root.current!
+        section.addEventListener('pointermove', onMove)
+        section.addEventListener('pointerleave', onLeave)
+
+        const hover = tilts.map((el, i) => {
+          const enter = () => {
+            gsap.set(wraps[i], { zIndex: 10 })
+            gsap.to(el, { scale: 1.06, duration: 0.6, ease: 'power3.out', overwrite: 'auto' })
+          }
+          const leave = () => {
+            gsap.to(el, { scale: 1, duration: 0.6, ease: 'power3.out', overwrite: 'auto', onComplete: () => { gsap.set(wraps[i], { zIndex: collage[i].z }) } })
+          }
+          el.addEventListener('pointerenter', enter)
+          el.addEventListener('pointerleave', leave)
+          return () => {
+            el.removeEventListener('pointerenter', enter)
+            el.removeEventListener('pointerleave', leave)
+          }
+        })
+        return () => {
+          section.removeEventListener('pointermove', onMove)
+          section.removeEventListener('pointerleave', onLeave)
+          hover.forEach((off) => off())
+        }
+      })
     },
     { scope: root },
   )
@@ -65,7 +111,8 @@ export function HeroSection() {
         <div className="relative z-10 lg:col-span-7 lg:self-center">
           <h1 ref={title} className="display text-[clamp(3.6rem,19vw,6.5rem)] text-ink lg:text-[clamp(5.5rem,10.6vw,14rem)]" aria-label={project.title}>
             <span className="block">Летопись</span>
-            <span className="serif-accent block py-[0.04em] text-[0.64em] normal-case leading-[0.95] text-rust lg:pl-[0.9em]">глазами</span>
+            {/* «глазами» — крупнее, без лишних отступов между строками */}
+            <span className="serif-accent -mt-[0.14em] mb-[0.04em] block pl-[0.35em] text-[0.92em] normal-case leading-[0.9] text-rust lg:pl-[0.7em]">глазами</span>
             <span className="block">губернаторов</span>
           </h1>
           <div className="mt-6 max-w-xl md:mt-10">
@@ -88,12 +135,15 @@ export function HeroSection() {
         <div ref={area} className="pointer-events-none relative z-0 mx-auto my-6 aspect-[4/3.6] w-full max-w-[560px] lg:col-span-5 lg:my-0 lg:max-w-none lg:self-center" aria-hidden="true">
           {collage.map((c, i) => (
             <div key={i} data-hero-wrap className="absolute" style={{ left: `${c.x}%`, top: `${c.y - 8}%`, width: `${c.w}%`, zIndex: c.z }}>
-              <div
-                data-hero-card
-                className="aspect-[9/16] overflow-hidden rounded-[clamp(10px,1.2vw,20px)] bg-choc shadow-[0_28px_50px_-22px_rgba(35,21,14,0.6)]"
-                style={{ transform: `rotate(${c.r}deg)` }}
-              >
-                <img src={c.image.srcSmall} srcSet={`${c.image.srcSmall} 480w, ${c.image.src} 960w`} sizes="(max-width: 1023px) 40vw, 18vw" alt="" className="h-full w-full object-cover" style={{ objectPosition: c.pos }} />
+              {/* слой реакции на курсор */}
+              <div data-hero-tilt className="pointer-events-auto">
+                <div
+                  data-hero-card
+                  className="aspect-[9/16] overflow-hidden rounded-[clamp(10px,1.2vw,20px)] bg-choc shadow-[0_28px_50px_-22px_rgba(35,21,14,0.6)]"
+                  style={{ transform: `rotate(${c.r}deg)` }}
+                >
+                  <img src={c.image.srcSmall} srcSet={`${c.image.srcSmall} 480w, ${c.image.src} 960w`} sizes="(max-width: 1023px) 40vw, 18vw" alt="" className="h-full w-full object-cover" style={{ objectPosition: c.pos }} />
+                </div>
               </div>
             </div>
           ))}
