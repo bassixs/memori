@@ -26,7 +26,7 @@ export function ResultsSection() {
   const filmCols = KEYS.filter((k) => filmRows.some((f) => stats.byFilm[f.id][k] !== null))
   const maxViews = Math.max(0, ...filmRows.map((f) => stats.byFilm[f.id].views ?? 0))
   const platformRows = platforms.filter((p) => stats.byPlatform[p.id].views !== null || stats.byPlatform[p.id].placements !== null)
-  const links = films.reduce((n, f) => n + Object.values(f.publications).filter(Boolean).length, 0)
+  const links = films.reduce((n, f) => n + Object.values(f.publications).flat().length, 0)
   const hasData = totals.length > 0 || extra.length > 0 || filmRows.length > 0 || platformRows.length > 0
 
   useGSAP(

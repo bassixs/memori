@@ -46,15 +46,16 @@ node scripts/build-media.mjs "D:/путь/к/Летопись"   # другой 
 | `src/data/distribution.ts` | Площадки и их статус |
 | `src/data/stats.ts` | Статистика (все значения `null`, пока нет данных) |
 
-### Добавить ссылки на опубликованные ролики
+### Ссылки на опубликованные ролики
 
-В `src/data/films.ts` у нужного фильма заполните `publications`:
+В `src/data/films.ts` у каждого ролика заполнен `publications` через помощник `links(max, telegram, vkPost, vkClip, ok)`.
+Можно задать и вручную — по нескольку ссылок на площадку:
 
 ```ts
-publications: { vk: 'https://vk.com/video…', telegram: 'https://t.me/…', max: null, ok: null },
+publications: { vk: [{ url: 'https://vk.ru/wall-…', label: 'пост' }, { url: 'https://vk.ru/clip-…', label: 'клип' }], telegram: [{ url: 'https://t.me/…' }], max: [], ok: [] },
 ```
 
-Ссылки появятся в разделе «Распространение» у соответствующей площадки, а счётчик ссылок обновится в «Результатах».
+Ссылки выводятся в разделе «Распространение» у каждой площадки; сводка «публикаций / площадки» считается автоматически.
 
 ### Изменить статус площадки
 

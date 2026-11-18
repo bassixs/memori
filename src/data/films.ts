@@ -30,12 +30,24 @@ export interface Film {
   /** Длительность ролика в секундах; null — неизвестна (плеер возьмёт из метаданных) */
   duration: number | null
   /** Ссылки на публикации ролика по площадкам; null — ещё не опубликован / нет данных */
-  publications: Record<PlatformId, string | null>
+  publications: Record<PlatformId, Publication[]>
   /** Кадры для раздела «Реализация» и героя */
   stills: ImageRef[]
 }
 
-const noLinks = (): Record<PlatformId, string | null> => ({ vk: null, telegram: null, max: null, ok: null })
+/** Публикация ролика на площадке. label — уточнение, если ссылок несколько (например, «клип»). */
+export interface Publication {
+  url: string
+  label?: string
+}
+
+/** Ссылки на публикации: max, telegram, vk (пост и клип), ok */
+const links = (max: string, telegram: string, vkPost: string, vkClip: string, ok: string): Record<PlatformId, Publication[]> => ({
+  max: [{ url: max }],
+  telegram: [{ url: telegram }],
+  vk: [{ url: vkPost, label: 'пост' }, { url: vkClip, label: 'клип' }],
+  ok: [{ url: ok }],
+})
 
 export const films: Film[] = [
   {
@@ -54,7 +66,13 @@ export const films: Film[] = [
     posterPosition: '50% 30%',
     aspectRatio: 9 / 16,
     duration: localVideo('ivan').duration,
-    publications: noLinks(),
+    publications: links(
+      'https://max.ru/klg_alarm/AaGxAclSNzg',
+      'https://t.me/klg_alarm/20286',
+      'https://vk.ru/wall-204895491_33244',
+      'https://vk.ru/clip-204895491_456242541',
+      'https://ok.ru/klgalarm/topic/157926676131233',
+    ),
     stills: [
       img('ivan', 'ugra-1480-osennyaya-bumazhnaya-diorama-1'),
       img('ivan', 'khan-akhmat-na-kone-u-ugry-3'),
@@ -80,7 +98,13 @@ export const films: Film[] = [
     posterPosition: '50% 25%',
     aspectRatio: 9 / 16,
     duration: localVideo('zhukov').duration,
-    publications: noLinks(),
+    publications: links(
+      'https://max.ru/klg_alarm/AaHBCchLOIY',
+      'https://t.me/klg_alarm/20320',
+      'https://vk.ru/wall-204895491_33280',
+      'https://vk.ru/clip-204895491_456242560',
+      'https://ok.ru/klgalarm/topic/157930756730273',
+    ),
     stills: [
       img('zhukov', 'rassvet-nad-izboy-zhukovykh'),
       img('zhukov', 'snezhnaya-liniya-oborony-pod-moskvoy'),
@@ -106,7 +130,13 @@ export const films: Film[] = [
     posterPosition: '50% 30%',
     aspectRatio: 9 / 16,
     duration: localVideo('kurchatov').duration,
-    publications: noLinks(),
+    publications: links(
+      'https://max.ru/klg_alarm/AaHLH4m1apY',
+      'https://t.me/klg_alarm/20361',
+      'https://vk.ru/wall-204895491_33340',
+      'https://vk.ru/clip-204895491_456242580',
+      'https://ok.ru/klgalarm/topic/157933089811873',
+    ),
     stills: [
       img('kurchatov', '06-reactor-f1', 'Реактор Ф-1'),
       img('kurchatov', '02-obninsk-facade', 'Обнинск'),
@@ -132,7 +162,13 @@ export const films: Film[] = [
     posterPosition: '50% 40%',
     aspectRatio: 9 / 16,
     duration: localVideo('cosmos').duration,
-    publications: noLinks(),
+    publications: links(
+      'https://max.ru/klg_alarm/AaHU4uUWNRw',
+      'https://t.me/klg_alarm/20386',
+      'https://vk.ru/wall-204895491_33402',
+      'https://vk.ru/clip-204895491_456242600',
+      'https://ok.ru/klgalarm/topic/157935471717793',
+    ),
     stills: [
       img('cosmos', 'bumazhnyy-vzlet-rakety-vostok-8'),
       img('cosmos', 'gagarin-u-illyuminatora-v-bumazhnom-kosmolete-3', 'Гагарин у иллюминатора'),

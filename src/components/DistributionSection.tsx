@@ -25,6 +25,10 @@ export function DistributionSection() {
     { scope: root },
   )
 
+  const totalLinks = films.reduce((n, f) => n + Object.values(f.publications).flat().length, 0)
+  const activePlatforms = platforms.filter((p) => films.some((f) => f.publications[p.id].length > 0)).length
+  const publishedFilms = films.filter((f) => platforms.every((p) => f.publications[p.id].length > 0)).length
+
   return (
     <section ref={root} id="distribution" data-section="Распространение" className="paper-grain relative overflow-x-clip bg-gold-soft py-24 text-ink md:py-36">
       <div className="mx-auto max-w-[1720px] px-4 md:px-[4vw]">
@@ -37,9 +41,25 @@ export function DistributionSection() {
           <p className="max-w-md self-end text-[1.02rem] leading-relaxed text-choc/80 lg:col-span-4 lg:pb-3">{project.distribution.lead}</p>
         </div>
 
+        {/* Сводка размещения — считается из ссылок в films.ts */}
+        {totalLinks > 0 && (
+          <dl className="mt-14 flex flex-wrap gap-x-12 gap-y-6 md:mt-20">
+            {[
+              { v: totalLinks, l: 'публикаций' },
+              { v: activePlatforms, l: 'площадки' },
+              { v: publishedFilms, l: 'ролика на каждой площадке' },
+            ].map((m) => (
+              <div key={m.l} className="flex items-baseline gap-3">
+                <dd className="display text-[clamp(3.4rem,7vw,6rem)] leading-none tabular-nums">{String(m.v).padStart(2, '0')}</dd>
+                <dt className="text-sm text-choc/70">{m.l}</dt>
+              </div>
+            ))}
+          </dl>
+        )}
+
         <ul className="mt-16 md:mt-24">
           {platforms.map((p, i) => {
-            const links = films.filter((f) => f.publications[p.id])
+            const links = films.filter((f) => f.publications[p.id].length > 0)
             return (
               <li key={p.id} data-platform className="group relative">
                 <span data-rule className="absolute inset-x-0 top-0 h-px bg-ink/25" />
@@ -68,11 +88,27 @@ export function DistributionSection() {
                       </span>
                       {links.length > 0 && (
                         <div className="mt-3 flex flex-wrap gap-2 md:justify-end">
-                          {links.map((f) => (
-                            <a key={f.id} href={f.publications[p.id]!} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 rounded-full bg-ink px-3 py-1.5 text-xs font-medium text-cream hover:bg-choc">
-                              {f.number} {f.short} <ArrowUpRight className="size-3" />
-                            </a>
-                          ))}
+                          {links.map((f) => {
+                            const pubs = f.publications[p.id]
+                            if (pubs.length === 1) {
+                              return (
+                                <a key={f.id} href={pubs[0].url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 rounded-full bg-ink px-3 py-1.5 text-xs font-medium text-cream transition-colors hover:bg-choc">
+                                  {f.number} {f.short} <ArrowUpRight className="size-3" />
+                                </a>
+                              )
+                            }
+                            // несколько публикаций одного ролика (например, пост и клип ВКонтакте)
+                            return (
+                              <span key={f.id} className="inline-flex items-stretch overflow-hidden rounded-full bg-ink text-xs font-medium text-cream">
+                                <span className="py-1.5 pl-3 pr-2">{f.number} {f.short}</span>
+                                {pubs.map((pub) => (
+                                  <a key={pub.url} href={pub.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-0.5 border-l border-cream/20 px-2.5 py-1.5 text-cream/80 transition-colors hover:bg-choc hover:text-cream">
+                                    {pub.label} <ArrowUpRight className="size-3" />
+                                  </a>
+                                ))}
+                              </span>
+                            )
+                          })}
                         </div>
                       )}
                     </div>
