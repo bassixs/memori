@@ -2,17 +2,16 @@ import { useRef } from 'react'
 import { ArrowDown } from 'lucide-react'
 import { project } from '../data/project'
 import { films } from '../data/films'
-import { img } from '../lib/media'
 import { gsap, SplitText, useGSAP, isNarrow } from '../lib/gsap'
 import { scrollToId } from '../lib/deckBus'
 
-/** Коллаж из кадров всех четырёх фильмов: позиция (% от области), ширина (% от области), угол, глубина */
+/** Коллаж из кадров всех четырёх роликов: позиция (% от области), ширина (% от области), угол, глубина */
+// Четыре обложки — по одной на ролик, слева направо 01 → 04, каскадом с разной высотой и наклоном
 const collage = [
-  { image: films[3].poster, pos: films[3].posterPosition, x: 30, y: 6, w: 40, r: 3, z: 5, from: { x: 40, y: -120, r: 28 } },
-  { image: films[0].poster, pos: films[0].posterPosition, x: 2, y: 22, w: 33, r: -9, z: 3, from: { x: -120, y: 30, r: -30 } },
-  { image: films[1].poster, pos: films[1].posterPosition, x: 64, y: 18, w: 33, r: 8, z: 4, from: { x: 120, y: 10, r: 32 } },
-  { image: films[2].poster, pos: films[2].posterPosition, x: 18, y: 54, w: 28, r: -4, z: 6, from: { x: -60, y: 120, r: -20 } },
-  { image: img('ivan', 'ugra-1480-osennyaya-bumazhnaya-diorama-1'), pos: '50% 60%', x: 56, y: 60, w: 25, r: 6, z: 7, from: { x: 90, y: 120, r: 24 } },
+  { image: films[0].poster, pos: films[0].posterPosition, x: -4, y: 24, w: 36, r: -7, z: 2, from: { x: -130, y: 40, r: -30 } },
+  { image: films[1].poster, pos: films[1].posterPosition, x: 19, y: 2, w: 37, r: -2, z: 3, from: { x: -40, y: -120, r: -18 } },
+  { image: films[2].poster, pos: films[2].posterPosition, x: 43, y: 28, w: 36, r: 4, z: 4, from: { x: 40, y: 120, r: 20 } },
+  { image: films[3].poster, pos: films[3].posterPosition, x: 65, y: 8, w: 37, r: 9, z: 5, from: { x: 130, y: -30, r: 30 } },
 ]
 
 export function HeroSection() {
@@ -45,7 +44,7 @@ export function HeroSection() {
           tl.to(card, { rotation: c.r, duration: 1.1, ease: 'power3.inOut' }, 1.15 + i * 0.05)
         })
 
-        // При прокрутке композиция перестраивается и «стекает» к колоде фильмов
+        // При прокрутке композиция перестраивается и «стекает» к колоде роликов
         const narrow = isNarrow()
         const scrollTl = gsap.timeline({ scrollTrigger: { trigger: root.current, start: 'top top', end: 'bottom top', scrub: 0.8 } })
         wraps.forEach((wrap, i) => {
@@ -106,7 +105,7 @@ export function HeroSection() {
             <p data-hero-fade className="text-xs font-medium text-choc/70 md:text-sm">{project.caption}</p>
           </div>
           <button type="button" onClick={() => scrollToId('films')} className="group inline-flex items-center gap-3 text-sm font-semibold text-ink">
-            <span className="hidden sm:inline">Четыре фильма</span>
+            <span className="hidden sm:inline">Четыре ролика</span>
             <span className="grid size-11 place-items-center rounded-full bg-ink text-cream transition-transform duration-500 ease-out-expo group-hover:translate-y-1">
               <ArrowDown className="size-4" />
             </span>

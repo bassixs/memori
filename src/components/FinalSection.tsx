@@ -53,7 +53,7 @@ export function FinalSection() {
               type="button"
               data-fan
               onClick={() => deckBus.show(i)}
-              aria-label={`Смотреть фильм ${f.number}: ${f.title}`}
+              aria-label={`Смотреть ролик ${f.number}: ${f.title}`}
               className="group absolute left-1/2 top-0 aspect-[9/16] h-full -translate-x-1/2"
               style={{ zIndex: i === 1 || i === 2 ? 3 : 2 }}
             >
@@ -78,7 +78,7 @@ export function FinalSection() {
               <span className="grid size-11 place-items-center rounded-full bg-ink text-cream transition-transform duration-500 ease-out-expo group-hover:scale-110">
                 <Play className="ml-0.5 size-4 fill-current" />
               </span>
-              <span className="font-semibold">Смотреть фильмы</span>
+              <span className="font-semibold">Смотреть ролики</span>
             </button>
           </div>
         </div>

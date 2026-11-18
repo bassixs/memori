@@ -10,7 +10,7 @@ const filmNo = (img: ImageRef) => films.find((f) => f.id === img.film)!.number
 // Две ленты кадров, которые движутся навстречу друг другу при прокрутке
 const rowA = [films[0].stills[0], films[1].stills[1], films[2].stills[0], films[3].stills[0], films[0].stills[1], films[1].stills[3], films[2].stills[3], films[3].stills[3]]
 const rowB = [films[3].stills[1], films[2].stills[2], films[1].stills[0], films[0].stills[2], films[3].stills[2], films[2].stills[1], films[1].stills[2], films[0].stills[3]]
-// Крупный разворот: по одному выразительному кадру на фильм
+// Крупный разворот: по одному выразительному кадру на ролик
 const spread = [films[0].stills[3], films[1].stills[3], films[2].stills[0], films[3].stills[0]]
 
 const minutes = Math.floor(totals.seconds / 60)
@@ -89,7 +89,7 @@ export function ProductionGallery() {
           ))}
         </dl>
 
-        {/* Разворот: четыре фильма — одна художественная система */}
+        {/* Разворот: четыре ролика — одна художественная система */}
         <div data-spread-wrap className="relative mt-20 grid grid-cols-2 gap-3 md:mt-28 md:grid-cols-12 md:gap-5">
           {spread.map((img, i) => (
             <figure
@@ -101,7 +101,7 @@ export function ProductionGallery() {
                 <img src={img.srcSmall} srcSet={`${img.srcSmall} 480w, ${img.src} 960w`} sizes="(max-width: 767px) 48vw, 24vw" alt={img.caption} loading="lazy" decoding="async" className="h-full w-full object-cover" />
               </div>
               <figcaption className="mt-3 text-xs text-choc/70">
-                <span className="mr-2 font-semibold text-choc">Фильм {filmNo(img)}</span>
+                <span className="mr-2 font-semibold text-choc">Ролик {filmNo(img)}</span>
                 {img.caption}
               </figcaption>
             </figure>

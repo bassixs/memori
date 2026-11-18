@@ -234,12 +234,12 @@ export function CinematicVideoPlayer({ film, origin, transforms, onClosed }: Pro
   const showChrome = paused || !idle || error || needsTap
 
   return createPortal(
-    <div ref={root} role="dialog" aria-modal="true" aria-label={`Фильм ${film.number}: ${film.title}`} className="fixed inset-0 z-[200]" onMouseMove={wake} onTouchStart={wake}>
+    <div ref={root} role="dialog" aria-modal="true" aria-label={`Ролик ${film.number}: ${film.title}`} className="fixed inset-0 z-[200]" onMouseMove={wake} onTouchStart={wake}>
       <div ref={backdrop} className="absolute inset-0 bg-[#120a06]/[0.97]" onClick={close} />
 
-      {/* Информация о фильме — на широких экранах слева от вертикального видео */}
+      {/* Информация о ролике — на широких экранах слева от вертикального видео */}
       <div ref={info} className="pointer-events-none absolute left-[4vw] top-1/2 hidden max-w-[min(28vw,420px)] -translate-y-1/2 text-cream lg:block">
-        <p className="line-mask text-sm text-cream/60"><span data-line>Фильм {film.number} / 04</span></p>
+        <p className="line-mask text-sm text-cream/60"><span data-line>Ролик {film.number} / 04</span></p>
         <h2 className="display mt-3 text-[clamp(3.2rem,5.6vw,6.5rem)]">
           {film.titleLines.map((l, k) => (
             <span key={k} className="line-mask"><span data-line>{l}</span></span>
@@ -288,7 +288,7 @@ export function CinematicVideoPlayer({ film, origin, transforms, onClosed }: Pro
           {/* мобильная подпись */}
           <div className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black/60 to-transparent lg:hidden" />
           <p className="pointer-events-none absolute left-4 top-4 pr-16 text-cream lg:hidden">
-            <span className="text-xs text-cream/70">Фильм {film.number}</span>
+            <span className="text-xs text-cream/70">Ролик {film.number}</span>
             <span className="display block text-3xl">{film.title}</span>
           </p>
 

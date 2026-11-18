@@ -8,7 +8,7 @@ import { Odometer } from './Odometer'
 export function ProjectContext() {
   const root = useRef<HTMLElement>(null)
   const heading = useRef<HTMLHeadingElement>(null)
-  const [persons, films, platformsCount] = project.context.metrics
+  const [videos, platformsCount, content] = project.context.metrics
 
   useGSAP(
     () => {
@@ -58,35 +58,35 @@ export function ProjectContext() {
         {/* Показатели — частью редакционной композиции, с разным масштабом */}
         <div className="mt-20 grid grid-cols-12 gap-y-14 md:mt-28 md:gap-x-6">
           <div data-metric className="col-span-12 flex items-end gap-5 md:col-span-7 md:gap-8">
-            <Odometer value={persons.value} className="display text-[clamp(10rem,46vw,30rem)] leading-none text-gold-soft" />
+            <Odometer value={videos.value} className="display text-[clamp(10rem,46vw,30rem)] leading-none text-gold-soft" />
             <div data-metric-label className="line-mask mb-[0.9em] max-w-[11rem] text-lg font-medium leading-snug md:text-2xl">
-              <span>{persons.label}</span>
+              <span>{videos.label}</span>
             </div>
           </div>
 
-          <ol data-persons className="col-span-12 self-end border-t border-cream/15 md:col-span-5 md:mb-10" aria-label="Пять личностей и номера фильмов">
+          <ol data-persons className="col-span-12 self-end border-t border-cream/15 md:col-span-5 md:mb-10" aria-label="Пять личностей и номера роликов">
             {project.context.persons.map((p) => (
               <li data-person key={p.name} className="flex items-baseline justify-between gap-4 border-b border-cream/15 py-3">
                 <span className="display text-[1.9rem] md:text-[2.3rem]">{p.name}</span>
-                <span className="shrink-0 text-xs text-cream/50">фильм {p.film}</span>
+                <span className="shrink-0 text-xs text-cream/50">ролик {p.film}</span>
               </li>
             ))}
           </ol>
 
-          <div data-metric className="col-span-7 flex flex-col items-start md:col-span-4 md:col-start-2">
-            <Odometer value={films.value} className="display text-[clamp(6.5rem,28vw,17rem)] leading-none text-cream" />
-            <div data-metric-label className="line-mask mt-3 text-base font-medium md:text-xl">
-              <span>{films.label}</span>
-            </div>
-          </div>
-
-          <div data-metric className="col-span-5 flex flex-col items-start self-end md:col-span-4 md:col-start-8">
+          <div data-metric className="col-span-5 flex flex-col items-start self-end md:col-span-4 md:col-start-2">
             <Odometer value={platformsCount.value} className="display text-[clamp(4.5rem,18vw,10rem)] leading-none text-cream/40" />
             <div data-metric-label className="mt-3 text-base font-medium md:text-xl">
               <span className="line-mask"><span>{platformsCount.label}</span></span>
               <span className="line-mask mt-2 text-xs font-normal text-cream/50">
                 <span>{platforms.map((p) => p.name).join(' · ')}</span>
               </span>
+            </div>
+          </div>
+
+          <div data-metric className="col-span-7 flex flex-col items-start md:col-span-5 md:col-start-7">
+            <Odometer value={content.value} className="display text-[clamp(6.5rem,28vw,17rem)] leading-none text-cream" />
+            <div data-metric-label className="line-mask mt-3 text-base font-medium md:text-xl">
+              <span>{content.label}</span>
             </div>
           </div>
         </div>

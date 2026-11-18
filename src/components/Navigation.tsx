@@ -5,7 +5,7 @@ import { scrollToId } from '../lib/deckBus'
 
 const links = [
   { id: 'project', label: 'Проект' },
-  { id: 'films', label: 'Фильмы' },
+  { id: 'films', label: 'Ролики' },
   { id: 'production', label: 'Реализация' },
   { id: 'distribution', label: 'Аудитория' },
   { id: 'final', label: 'Финал' },

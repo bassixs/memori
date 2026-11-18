@@ -75,7 +75,7 @@ export function ResultsSection() {
               <div className="mt-16 grid gap-10 md:grid-cols-2">
                 {filmViews.length > 0 && (
                   <table className="w-full text-left text-sm">
-                    <caption className="mb-3 text-left text-xs text-choc/60">Просмотры по фильмам</caption>
+                    <caption className="mb-3 text-left text-xs text-choc/60">Просмотры по роликам</caption>
                     <tbody>
                       {filmViews.map((f) => (
                         <tr key={f.id} className="border-t border-ink/15">

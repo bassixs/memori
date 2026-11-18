@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { Play } from 'lucide-react'
 import { films } from '../data/films'
 import { gsap, Draggable, ScrollTrigger, useGSAP, prefersReducedMotion, isNarrow } from '../lib/gsap'
 import { deckBus } from '../lib/deckBus'
@@ -33,7 +32,7 @@ function poseFor(rel: number, w: number, h: number): Pose {
   ][rel]
 }
 
-/** Тёмный оттенок фона раздела под акцент активного фильма */
+/** Тёмный оттенок фона раздела под акцент активного ролика */
 const deckBg = (hex: string) => {
   const n = parseInt(hex.slice(1), 16)
   const mix = (c: number, t: number) => Math.round(c * 0.62 + t * 0.38)
@@ -51,7 +50,6 @@ export function FilmDeck() {
   const shadeEls = useRef<(HTMLDivElement | null)[]>([])
   const textEls = useRef<(HTMLDivElement | null)[]>([])
   const metaEls = useRef<(HTMLDivElement | null)[]>([])
-  const ctaRef = useRef<HTMLButtonElement>(null)
 
   const st = useRef({ active: 0, busy: false, tl: null as gsap.core.Timeline | null, playing: false })
   const [active, setActive] = useState(0)
@@ -180,10 +178,6 @@ export function FilmDeck() {
       tl.set(el, { zIndex: p.zIndex }, 0.5)
     })
 
-    // 8. кнопка просмотра
-    if (!reduce && ctaRef.current) {
-      tl.fromTo(ctaRef.current, { scale: 0.86, autoAlpha: 0.4 }, { scale: 1, autoAlpha: 1, duration: 0.7, ease: 'back.out(1.6)' }, interrupted ? 0.1 : 0.7)
-    }
   }, [])
 
   const step = useCallback((d: 1 | -1) => goTo(st.current.active + d, { dir: d }), [goTo])
@@ -204,7 +198,7 @@ export function FilmDeck() {
     if (el && !prefersReducedMotion()) {
       gsap.fromTo(el, { scale: 1.04 }, { scale: 1, duration: 0.7, ease: 'power3.out' })
     }
-    ctaRef.current?.focus({ preventScroll: true })
+    stage.current?.focus({ preventScroll: true })
   }, [])
 
   useEffect(() => {
@@ -329,8 +323,8 @@ export function FilmDeck() {
       ref={section}
       onKeyDown={onKeyDown}
       aria-roledescription="галерея"
-      aria-label="Четыре фильма"
-      data-section="Фильмы"
+      aria-label="Четыре ролика"
+      data-section="Ролики"
       className="paper-grain relative overflow-x-clip text-cream"
       style={{ background: 'var(--deck-bg)' }}
     >
@@ -338,8 +332,8 @@ export function FilmDeck() {
         {/* Заголовок раздела и счётчик */}
         <div className="relative z-[60] flex items-end justify-between gap-4 lg:absolute lg:inset-x-[4vw] lg:top-24">
           <p className="eyebrow text-cream/60">
-            02 — Фильмы
-            <span className="ml-3 hidden text-cream/40 md:inline">перелистывайте стрелками, мышью или свайпом</span>
+            02 — Ролики
+            <span className="ml-3 hidden text-cream/40 md:inline">листайте стрелками или свайпом · нажмите на карточку, чтобы смотреть</span>
           </p>
           <p className="display text-[2.4rem] tabular-nums md:text-[3.2rem]" aria-hidden="true">
             <span className="relative inline-grid overflow-hidden align-bottom">
@@ -355,12 +349,12 @@ export function FilmDeck() {
 
         {/* Левая колонка: имя героя, подзаголовок, описание, кнопка просмотра.
             На мобильных — display: contents, порядок задаётся через order */}
-        <div className="contents lg:absolute lg:bottom-[13%] lg:left-[4vw] lg:z-[55] lg:flex lg:w-[34vw] lg:flex-col">
+        <div className="contents lg:absolute lg:bottom-[11%] lg:left-[4vw] lg:z-[55] lg:flex lg:w-[34vw] lg:flex-col">
         <div className="pointer-events-none relative z-[55] order-1 mt-6 grid lg:mt-0">
           {films.map((f, i) => (
             <div key={f.id} ref={(el) => { textEls.current[i] = el }} className="col-start-1 row-start-1 self-end" aria-hidden={i !== active}>
               <p className="line-mask mb-2 text-sm font-medium text-cream/70 md:mb-4">
-                <span data-line>Фильм {f.number}</span>
+                <span data-line>Ролик {f.number}</span>
               </p>
               <h3 className="display text-[clamp(3.4rem,15vw,5.6rem)] lg:text-[clamp(4.5rem,7vw,9rem)]">
                 {f.titleLines.map((l, k) => (
@@ -392,17 +386,6 @@ export function FilmDeck() {
                 </div>
               ))}
             </div>
-            <button
-              ref={ctaRef}
-              type="button"
-              onClick={openFilm}
-              className="group mt-6 inline-flex items-center gap-3 rounded-full bg-cream py-2 pl-2 pr-6 text-ink transition-colors hover:bg-gold-soft md:mt-8"
-            >
-              <span className="grid size-11 place-items-center rounded-full bg-ink text-cream transition-transform duration-500 ease-out-expo group-hover:scale-110">
-                <Play className="ml-0.5 size-4 fill-current" />
-              </span>
-              <span className="text-[0.95rem] font-semibold">Смотреть фильм</span>
-            </button>
           </div>
 
         </div>
@@ -413,7 +396,7 @@ export function FilmDeck() {
             ref={stage}
             tabIndex={0}
             role="group"
-            aria-label={`Фильм ${film.number} из ${String(N).padStart(2, '0')}: ${film.title}. Стрелки влево и вправо — перелистывание, Enter — смотреть`}
+            aria-label={`Ролик ${film.number} из ${String(N).padStart(2, '0')}: ${film.title}. Стрелки влево и вправо — перелистывание, Enter — смотреть`}
             onKeyDown={(e) => {
               if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault()
@@ -429,6 +412,7 @@ export function FilmDeck() {
                 film={f}
                 index={i}
                 eager={i < 2}
+                active={i === active}
                 setPose={(el) => { poseEls.current[i] = el }}
                 setEnter={(el) => { enterEls.current[i] = el }}
                 setExit={(el) => { exitEls.current[i] = el }}
@@ -439,12 +423,12 @@ export function FilmDeck() {
           </div>
         </div>
 
-        {/* Управление */}
-        <div className="relative z-[60] order-4 mt-8 lg:absolute lg:bottom-10 lg:left-[4vw] lg:right-[4vw] lg:mt-0">
-          <DeckController films={films} active={active} onPrev={() => step(-1)} onNext={() => step(1)} onSelect={(i) => goTo(i)} />
+        {/* Управление: компактные стрелки справа под колодой */}
+        <div className="relative z-[60] order-4 mt-6 flex justify-end lg:absolute lg:bottom-[9%] lg:right-[4vw] lg:mt-0">
+          <DeckController onPrev={() => step(-1)} onNext={() => step(1)} />
         </div>
 
-        <p className="sr-only" aria-live="polite">{`Фильм ${film.number} из 04: ${film.title}`}</p>
+        <p className="sr-only" aria-live="polite">{`Ролик ${film.number} из 04: ${film.title}`}</p>
       </div>
 
       {playing !== null && (
