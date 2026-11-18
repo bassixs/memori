@@ -1,3 +1,6 @@
+/** Общее число публикаций серии — одно значение для «Основы проекта» и «Распространения» */
+const PUBLICATIONS = 25
+
 export const project = {
   title: 'Летопись глазами губернаторов',
   titleLines: ['Летопись', 'глазами', 'губернаторов'],
@@ -6,6 +9,7 @@ export const project = {
   caption: 'Отчёт о реализации проекта · 2026',
   region: 'Калужская область',
   year: 2026,
+  publications: PUBLICATIONS,
 
   context: {
     heading: 'История, рассказанная по-новому',
@@ -21,7 +25,7 @@ export const project = {
     metrics: [
       { value: 4, label: 'готовых ролика' },
       { value: 4, label: 'площадки распространения' },
-      { value: 25, label: 'единиц контента' },
+      { value: PUBLICATIONS, label: 'публикаций' },
     ],
   },
 

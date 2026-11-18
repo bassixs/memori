@@ -45,7 +45,7 @@ export function DistributionSection() {
         {totalLinks > 0 && (
           <dl className="mt-14 flex flex-wrap gap-x-12 gap-y-6 md:mt-20">
             {[
-              { v: totalLinks, l: 'публикаций' },
+              { v: project.publications, l: 'публикаций' },
               { v: activePlatforms, l: 'площадки' },
               { v: publishedFilms, l: 'ролика на каждой площадке' },
             ].map((m) => (
