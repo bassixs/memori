@@ -1,0 +1,373 @@
+{
+  "generated": "2026-11-18T07:11:22.894Z",
+  "source": "../Летопись-20261116T083913Z-1-001/Летопись",
+  "films": {
+    "ivan": {
+      "video": {
+        "src": "media/films/ivan.mp4",
+        "source": "Ролик 1 - Иван III\\ролик 1.mp4",
+        "frame": "media/films/ivan-frame.webp",
+        "width": 720,
+        "height": 1280,
+        "duration": 45.3
+      },
+      "clips": 13,
+      "images": {
+        "bumazhnaya-moskva-u-belokamennogo-kremlya-12": {
+          "source": "Ролик 1 - Иван III\\Картинки\\Бумажная Москва у Белокаменного Кремля-12.png",
+          "src": "media/img/ivan/bumazhnaya-moskva-u-belokamennogo-kremlya-12-960.webp",
+          "srcSmall": "media/img/ivan/bumazhnaya-moskva-u-belokamennogo-kremlya-12-480.webp"
+        },
+        "bumazhnye-voyska-na-dvukh-beregakh": {
+          "source": "Ролик 1 - Иван III\\Картинки\\Бумажные войска на двух берегах.png",
+          "src": "media/img/ivan/bumazhnye-voyska-na-dvukh-beregakh-960.webp",
+          "srcSmall": "media/img/ivan/bumazhnye-voyska-na-dvukh-beregakh-480.webp"
+        },
+        "bumazhnye-vsadniki-zolotoy-ordy-u-reki-2": {
+          "source": "Ролик 1 - Иван III\\Картинки\\Бумажные всадники Золотой Орды у реки-2.png",
+          "src": "media/img/ivan/bumazhnye-vsadniki-zolotoy-ordy-u-reki-2-960.webp",
+          "srcSmall": "media/img/ivan/bumazhnye-vsadniki-zolotoy-ordy-u-reki-2-480.webp"
+        },
+        "ivan-iii-pered-gladkim-bordovym-znamenem-5": {
+          "source": "Ролик 1 - Иван III\\Картинки\\Иван III перед гладким бордовым знаменем-5.png",
+          "src": "media/img/ivan/ivan-iii-pered-gladkim-bordovym-znamenem-5-960.webp",
+          "srcSmall": "media/img/ivan/ivan-iii-pered-gladkim-bordovym-znamenem-5-480.webp"
+        },
+        "osenniy-otkhod-velikoy-ordy-ot-ugry-9": {
+          "source": "Ролик 1 - Иван III\\Картинки\\Осенний отход Великой Орды от Угры-9.png",
+          "src": "media/img/ivan/osenniy-otkhod-velikoy-ordy-ot-ugry-9-960.webp",
+          "srcSmall": "media/img/ivan/osenniy-otkhod-velikoy-ordy-ot-ugry-9-480.webp"
+        },
+        "proportsionalnye-ruki-sidyaschego-soldata-s-lukom": {
+          "source": "Ролик 1 - Иван III\\Картинки\\Пропорциональные руки сидящего солдата с луком.png",
+          "src": "media/img/ivan/proportsionalnye-ruki-sidyaschego-soldata-s-lukom-960.webp",
+          "srcSmall": "media/img/ivan/proportsionalnye-ruki-sidyaschego-soldata-s-lukom-480.webp"
+        },
+        "pushkar-i-luchniki-na-beregu-ugry-6": {
+          "source": "Ролик 1 - Иван III\\Картинки\\Пушкарь и лучники на берегу Угры-6.png",
+          "src": "media/img/ivan/pushkar-i-luchniki-na-beregu-ugry-6-960.webp",
+          "srcSmall": "media/img/ivan/pushkar-i-luchniki-na-beregu-ugry-6-480.webp"
+        },
+        "russkiy-luchnik-u-reki-ugry": {
+          "source": "Ролик 1 - Иван III\\Картинки\\Русский лучник у реки Угры.png",
+          "src": "media/img/ivan/russkiy-luchnik-u-reki-ugry-960.webp",
+          "srcSmall": "media/img/ivan/russkiy-luchnik-u-reki-ugry-480.webp"
+        },
+        "srednevekovaya-moskva-v-bumazhnoy-miniatyure-13": {
+          "source": "Ролик 1 - Иван III\\Картинки\\Средневековая Москва в бумажной миниатюре-13.png",
+          "src": "media/img/ivan/srednevekovaya-moskva-v-bumazhnoy-miniatyure-13-960.webp",
+          "srcSmall": "media/img/ivan/srednevekovaya-moskva-v-bumazhnoy-miniatyure-13-480.webp"
+        },
+        "tri-bumazhnykh-dozornykh-u-reki-ugry-10": {
+          "source": "Ролик 1 - Иван III\\Картинки\\Три бумажных дозорных у реки Угры-10.png",
+          "src": "media/img/ivan/tri-bumazhnykh-dozornykh-u-reki-ugry-10-960.webp",
+          "srcSmall": "media/img/ivan/tri-bumazhnykh-dozornykh-u-reki-ugry-10-480.webp"
+        },
+        "ugra-1480-osennyaya-bumazhnaya-diorama-1": {
+          "source": "Ролик 1 - Иван III\\Картинки\\Угра, 1480_ осенняя бумажная диорама-1.png",
+          "src": "media/img/ivan/ugra-1480-osennyaya-bumazhnaya-diorama-1-960.webp",
+          "srcSmall": "media/img/ivan/ugra-1480-osennyaya-bumazhnaya-diorama-1-480.webp"
+        },
+        "khan-akhmat-na-kone-u-ugry-3": {
+          "source": "Ролик 1 - Иван III\\Картинки\\Хан Ахмат на коне у Угры-3.png",
+          "src": "media/img/ivan/khan-akhmat-na-kone-u-ugry-3-960.webp",
+          "srcSmall": "media/img/ivan/khan-akhmat-na-kone-u-ugry-3-480.webp"
+        }
+      }
+    },
+    "zhukov": {
+      "video": {
+        "src": "media/films/zhukov.mp4",
+        "source": "Ролик 2 - Г.К. Жуков\\ролик 2.mp4",
+        "frame": "media/films/zhukov-frame.webp",
+        "width": 720,
+        "height": 1280,
+        "duration": 53.2
+      },
+      "clips": 14,
+      "images": {
+        "dva-boytsa-delyatsya-flyagoy-v-berline": {
+          "source": "Ролик 2 - Г.К. Жуков\\Картинки\\Два бойца делятся флягой в Берлине.png",
+          "src": "media/img/zhukov/dva-boytsa-delyatsya-flyagoy-v-berline-960.webp",
+          "srcSmall": "media/img/zhukov/dva-boytsa-delyatsya-flyagoy-v-berline-480.webp"
+        },
+        "zhukov-u-shtabnoy-karty-osen-1941": {
+          "source": "Ролик 2 - Г.К. Жуков\\Картинки\\Жуков у штабной карты, осень 1941.png",
+          "src": "media/img/zhukov/zhukov-u-shtabnoy-karty-osen-1941-960.webp",
+          "srcSmall": "media/img/zhukov/zhukov-u-shtabnoy-karty-osen-1941-480.webp"
+        },
+        "zimniy-marsh-krasnoarmeytsev": {
+          "source": "Ролик 2 - Г.К. Жуков\\Картинки\\Зимний марш красноармейцев.png",
+          "src": "media/img/zhukov/zimniy-marsh-krasnoarmeytsev-960.webp",
+          "srcSmall": "media/img/zhukov/zimniy-marsh-krasnoarmeytsev-480.webp"
+        },
+        "zimniy-rubezh-sredi-berez": {
+          "source": "Ролик 2 - Г.К. Жуков\\Картинки\\Зимний рубеж среди берёз.png",
+          "src": "media/img/zhukov/zimniy-rubezh-sredi-berez-960.webp",
+          "srcSmall": "media/img/zhukov/zimniy-rubezh-sredi-berez-480.webp"
+        },
+        "kartonnyy-zhukov-v-miniatyure": {
+          "source": "Ролик 2 - Г.К. Жуков\\Картинки\\Картонный Жуков в миниатюре.png",
+          "src": "media/img/zhukov/kartonnyy-zhukov-v-miniatyure-960.webp",
+          "srcSmall": "media/img/zhukov/kartonnyy-zhukov-v-miniatyure-480.webp"
+        },
+        "krupnyy-plan-kartonnogo-portreta-zhukova": {
+          "source": "Ролик 2 - Г.К. Жуков\\Картинки\\Крупный план картонного портрета Жукова.png",
+          "src": "media/img/zhukov/krupnyy-plan-kartonnogo-portreta-zhukova-960.webp",
+          "srcSmall": "media/img/zhukov/krupnyy-plan-kartonnogo-portreta-zhukova-480.webp"
+        },
+        "mnogosloynyy-kartonnyy-malchik-u-dveri": {
+          "source": "Ролик 2 - Г.К. Жуков\\Картинки\\Многослойный картонный мальчик у двери.png",
+          "src": "media/img/zhukov/mnogosloynyy-kartonnyy-malchik-u-dveri-960.webp",
+          "srcSmall": "media/img/zhukov/mnogosloynyy-kartonnyy-malchik-u-dveri-480.webp"
+        },
+        "palets-kasaetsya-krasnogo-markera-na-karte": {
+          "source": "Ролик 2 - Г.К. Жуков\\Картинки\\Палец касается красного маркера на карте.png",
+          "src": "media/img/zhukov/palets-kasaetsya-krasnogo-markera-na-karte-960.webp",
+          "srcSmall": "media/img/zhukov/palets-kasaetsya-krasnogo-markera-na-karte-480.webp"
+        },
+        "palets-rebenka-nazhimaet-na-derevyannuyu-zadvizhku": {
+          "source": "Ролик 2 - Г.К. Жуков\\Картинки\\Палец ребёнка нажимает на деревянную задвижку.png",
+          "src": "media/img/zhukov/palets-rebenka-nazhimaet-na-derevyannuyu-zadvizhku-960.webp",
+          "srcSmall": "media/img/zhukov/palets-rebenka-nazhimaet-na-derevyannuyu-zadvizhku-480.webp"
+        },
+        "pero-kasaetsya-chistogo-lista": {
+          "source": "Ролик 2 - Г.К. Жуков\\Картинки\\Перо касается чистого листа.png",
+          "src": "media/img/zhukov/pero-kasaetsya-chistogo-lista-960.webp",
+          "srcSmall": "media/img/zhukov/pero-kasaetsya-chistogo-lista-480.webp"
+        },
+        "pekhotintsy-v-snegu-sredi-berez": {
+          "source": "Ролик 2 - Г.К. Жуков\\Картинки\\Пехотинцы в снегу среди берёз.png",
+          "src": "media/img/zhukov/pekhotintsy-v-snegu-sredi-berez-960.webp",
+          "srcSmall": "media/img/zhukov/pekhotintsy-v-snegu-sredi-berez-480.webp"
+        },
+        "razrushennyy-berlin-u-reykhstaga": {
+          "source": "Ролик 2 - Г.К. Жуков\\Картинки\\Разрушенный Берлин у Рейхстага.png",
+          "src": "media/img/zhukov/razrushennyy-berlin-u-reykhstaga-960.webp",
+          "srcSmall": "media/img/zhukov/razrushennyy-berlin-u-reykhstaga-480.webp"
+        },
+        "rassvet-nad-izboy-zhukovykh": {
+          "source": "Ролик 2 - Г.К. Жуков\\Картинки\\Рассвет над избой Жуковых.png",
+          "src": "media/img/zhukov/rassvet-nad-izboy-zhukovykh-960.webp",
+          "srcSmall": "media/img/zhukov/rassvet-nad-izboy-zhukovykh-480.webp"
+        },
+        "sapog-skvoz-snezhnuyu-korku": {
+          "source": "Ролик 2 - Г.К. Жуков\\Картинки\\Сапог сквозь снежную корку.png",
+          "src": "media/img/zhukov/sapog-skvoz-snezhnuyu-korku-960.webp",
+          "srcSmall": "media/img/zhukov/sapog-skvoz-snezhnuyu-korku-480.webp"
+        },
+        "sloenyy-kartonnyy-portret-zhukova-v-albome": {
+          "source": "Ролик 2 - Г.К. Жуков\\Картинки\\Слоёный картонный портрет Жукова в альбоме.png",
+          "src": "media/img/zhukov/sloenyy-kartonnyy-portret-zhukova-v-albome-960.webp",
+          "srcSmall": "media/img/zhukov/sloenyy-kartonnyy-portret-zhukova-v-albome-480.webp"
+        },
+        "snezhnaya-liniya-oborony-pod-moskvoy": {
+          "source": "Ролик 2 - Г.К. Жуков\\Картинки\\Снежная линия обороны под Москвой.png",
+          "src": "media/img/zhukov/snezhnaya-liniya-oborony-pod-moskvoy-960.webp",
+          "srcSmall": "media/img/zhukov/snezhnaya-liniya-oborony-pod-moskvoy-480.webp"
+        },
+        "tikhaya-smena-v-zavodskoy-masterskoy": {
+          "source": "Ролик 2 - Г.К. Жуков\\Картинки\\Тихая смена в заводской мастерской.png",
+          "src": "media/img/zhukov/tikhaya-smena-v-zavodskoy-masterskoy-960.webp",
+          "srcSmall": "media/img/zhukov/tikhaya-smena-v-zavodskoy-masterskoy-480.webp"
+        }
+      }
+    },
+    "kurchatov": {
+      "video": {
+        "src": "media/films/kurchatov.mp4",
+        "source": "Ролик 3 - И.В. Курчатов\\ролик 3.mp4",
+        "frame": "media/films/kurchatov-frame.webp",
+        "width": 720,
+        "height": 1280,
+        "duration": 55.4
+      },
+      "clips": 14,
+      "images": {
+        "01-portrait": {
+          "source": "Ролик 3 - И.В. Курчатов\\Картинки\\01-portrait.png",
+          "src": "media/img/kurchatov/01-portrait-960.webp",
+          "srcSmall": "media/img/kurchatov/01-portrait-480.webp"
+        },
+        "02-obninsk-facade": {
+          "source": "Ролик 3 - И.В. Курчатов\\Картинки\\02-obninsk-facade.png",
+          "src": "media/img/kurchatov/02-obninsk-facade-960.webp",
+          "srcSmall": "media/img/kurchatov/02-obninsk-facade-480.webp"
+        },
+        "03-launch-greeting": {
+          "source": "Ролик 3 - И.В. Курчатов\\Картинки\\03-launch-greeting.png",
+          "src": "media/img/kurchatov/03-launch-greeting-960.webp",
+          "srcSmall": "media/img/kurchatov/03-launch-greeting-480.webp"
+        },
+        "04-early-research": {
+          "source": "Ролик 3 - И.В. Курчатов\\Картинки\\04-early-research.png",
+          "src": "media/img/kurchatov/04-early-research-960.webp",
+          "srcSmall": "media/img/kurchatov/04-early-research-480.webp"
+        },
+        "05-laboratory-2": {
+          "source": "Ролик 3 - И.В. Курчатов\\Картинки\\05-laboratory-2.png",
+          "src": "media/img/kurchatov/05-laboratory-2-960.webp",
+          "srcSmall": "media/img/kurchatov/05-laboratory-2-480.webp"
+        },
+        "06-reactor-f1": {
+          "source": "Ролик 3 - И.В. Курчатов\\Картинки\\06-reactor-f1.png",
+          "src": "media/img/kurchatov/06-reactor-f1-960.webp",
+          "srcSmall": "media/img/kurchatov/06-reactor-f1-480.webp"
+        },
+        "07-semipalatinsk": {
+          "source": "Ролик 3 - И.В. Курчатов\\Картинки\\07-semipalatinsk.png",
+          "src": "media/img/kurchatov/07-semipalatinsk-960.webp",
+          "srcSmall": "media/img/kurchatov/07-semipalatinsk-480.webp"
+        },
+        "08-reactor-am1": {
+          "source": "Ролик 3 - И.В. Курчатов\\Картинки\\08-reactor-am1.png",
+          "src": "media/img/kurchatov/08-reactor-am1-960.webp",
+          "srcSmall": "media/img/kurchatov/08-reactor-am1-480.webp"
+        },
+        "09-heat-to-steam": {
+          "source": "Ролик 3 - И.В. Курчатов\\Картинки\\09-heat-to-steam.png",
+          "src": "media/img/kurchatov/09-heat-to-steam-960.webp",
+          "srcSmall": "media/img/kurchatov/09-heat-to-steam-480.webp"
+        },
+        "10-steam-turbine": {
+          "source": "Ролик 3 - И.В. Курчатов\\Картинки\\10-steam-turbine.png",
+          "src": "media/img/kurchatov/10-steam-turbine-960.webp",
+          "srcSmall": "media/img/kurchatov/10-steam-turbine-480.webp"
+        },
+        "11-power-grid": {
+          "source": "Ролик 3 - И.В. Курчатов\\Картинки\\11-power-grid.png",
+          "src": "media/img/kurchatov/11-power-grid-960.webp",
+          "srcSmall": "media/img/kurchatov/11-power-grid-480.webp"
+        },
+        "12-industry-and-science": {
+          "source": "Ролик 3 - И.В. Курчатов\\Картинки\\12-industry-and-science.png",
+          "src": "media/img/kurchatov/12-industry-and-science-960.webp",
+          "srcSmall": "media/img/kurchatov/12-industry-and-science-480.webp"
+        },
+        "13-vostok-liftoff": {
+          "source": "Ролик 3 - И.В. Курчатов\\Картинки\\13-vostok-liftoff.png",
+          "src": "media/img/kurchatov/13-vostok-liftoff-960.webp",
+          "srcSmall": "media/img/kurchatov/13-vostok-liftoff-480.webp"
+        },
+        "inzhenery-pod-zelenoy-lampoy": {
+          "source": "Ролик 3 - И.В. Курчатов\\Картинки\\Инженеры под зелёной лампой.png",
+          "src": "media/img/kurchatov/inzhenery-pod-zelenoy-lampoy-960.webp",
+          "srcSmall": "media/img/kurchatov/inzhenery-pod-zelenoy-lampoy-480.webp"
+        },
+        "kurchatov-i-assistenty-za-chertezhami": {
+          "source": "Ролик 3 - И.В. Курчатов\\Картинки\\Курчатов и ассистенты за чертежами.png",
+          "src": "media/img/kurchatov/kurchatov-i-assistenty-za-chertezhami-960.webp",
+          "srcSmall": "media/img/kurchatov/kurchatov-i-assistenty-za-chertezhami-480.webp"
+        }
+      }
+    },
+    "cosmos": {
+      "video": {
+        "src": "media/films/cosmos.mp4",
+        "source": "Ролик 4 - А.Ю. Гагарин и К.Э. Циолковский\\ролик 4.mp4",
+        "frame": "media/films/cosmos-frame.webp",
+        "width": 720,
+        "height": 1280,
+        "duration": 73.5
+      },
+      "clips": 19,
+      "images": {
+        "bumazhnaya-kaluga-dvukh-epokh-4": {
+          "source": "Ролик 4 - А.Ю. Гагарин и К.Э. Циолковский\\Картинки\\Бумажная Калуга двух эпох-4.png",
+          "src": "media/img/cosmos/bumazhnaya-kaluga-dvukh-epokh-4-960.webp",
+          "srcSmall": "media/img/cosmos/bumazhnaya-kaluga-dvukh-epokh-4-480.webp"
+        },
+        "bumazhnaya-kaluga-muzey-i-raketa-19": {
+          "source": "Ролик 4 - А.Ю. Гагарин и К.Э. Циолковский\\Картинки\\Бумажная Калуга_ музей и ракета-19.png",
+          "src": "media/img/cosmos/bumazhnaya-kaluga-muzey-i-raketa-19-960.webp",
+          "srcSmall": "media/img/cosmos/bumazhnaya-kaluga-muzey-i-raketa-19-480.webp"
+        },
+        "bumazhnaya-luna-v-okne-tsiolkovskogo": {
+          "source": "Ролик 4 - А.Ю. Гагарин и К.Э. Циолковский\\Картинки\\Бумажная Луна в окне Циолковского.png",
+          "src": "media/img/cosmos/bumazhnaya-luna-v-okne-tsiolkovskogo-960.webp",
+          "srcSmall": "media/img/cosmos/bumazhnaya-luna-v-okne-tsiolkovskogo-480.webp"
+        },
+        "bumazhnaya-doroga-ot-tsiolkovskogo-k-gagarinu-16": {
+          "source": "Ролик 4 - А.Ю. Гагарин и К.Э. Циолковский\\Картинки\\Бумажная дорога от Циолковского к Гагарину-16.png",
+          "src": "media/img/cosmos/bumazhnaya-doroga-ot-tsiolkovskogo-k-gagarinu-16-960.webp",
+          "srcSmall": "media/img/cosmos/bumazhnaya-doroga-ot-tsiolkovskogo-k-gagarinu-16-480.webp"
+        },
+        "bumazhnaya-raketa-v-masterskoy-tsiolkovskogo-6": {
+          "source": "Ролик 4 - А.Ю. Гагарин и К.Э. Циолковский\\Картинки\\Бумажная ракета в мастерской Циолковского-6.png",
+          "src": "media/img/cosmos/bumazhnaya-raketa-v-masterskoy-tsiolkovskogo-6-960.webp",
+          "srcSmall": "media/img/cosmos/bumazhnaya-raketa-v-masterskoy-tsiolkovskogo-6-480.webp"
+        },
+        "bumazhnaya-traektoriya-k-zemle-17": {
+          "source": "Ролик 4 - А.Ю. Гагарин и К.Э. Циолковский\\Картинки\\Бумажная траектория к Земле-17.png",
+          "src": "media/img/cosmos/bumazhnaya-traektoriya-k-zemle-17-960.webp",
+          "srcSmall": "media/img/cosmos/bumazhnaya-traektoriya-k-zemle-17-480.webp"
+        },
+        "bumazhnyy-gagarin-u-illyuminatora-18": {
+          "source": "Ролик 4 - А.Ю. Гагарин и К.Э. Циолковский\\Картинки\\Бумажный Гагарин у иллюминатора-18.png",
+          "src": "media/img/cosmos/bumazhnyy-gagarin-u-illyuminatora-18-960.webp",
+          "srcSmall": "media/img/cosmos/bumazhnyy-gagarin-u-illyuminatora-18-480.webp"
+        },
+        "bumazhnyy-tsiolkovskiy-u-okna-1": {
+          "source": "Ролик 4 - А.Ю. Гагарин и К.Э. Циолковский\\Картинки\\Бумажный Циолковский у окна-1.png",
+          "src": "media/img/cosmos/bumazhnyy-tsiolkovskiy-u-okna-1-960.webp",
+          "srcSmall": "media/img/cosmos/bumazhnyy-tsiolkovskiy-u-okna-1-480.webp"
+        },
+        "bumazhnyy-vzlet-rakety-vostok-8": {
+          "source": "Ролик 4 - А.Ю. Гагарин и К.Э. Циолковский\\Картинки\\Бумажный взлёт ракеты Восток-8.png",
+          "src": "media/img/cosmos/bumazhnyy-vzlet-rakety-vostok-8-960.webp",
+          "srcSmall": "media/img/cosmos/bumazhnyy-vzlet-rakety-vostok-8-480.webp"
+        },
+        "vostok-nad-bumazhnoy-zemley-9": {
+          "source": "Ролик 4 - А.Ю. Гагарин и К.Э. Циолковский\\Картинки\\Восток над бумажной Землёй-9.png",
+          "src": "media/img/cosmos/vostok-nad-bumazhnoy-zemley-9-960.webp",
+          "srcSmall": "media/img/cosmos/vostok-nad-bumazhnoy-zemley-9-480.webp"
+        },
+        "gagarin-zakladyvaet-fundament-muzeya-12": {
+          "source": "Ролик 4 - А.Ю. Гагарин и К.Э. Циолковский\\Картинки\\Гагарин закладывает фундамент музея-12.png",
+          "src": "media/img/cosmos/gagarin-zakladyvaet-fundament-muzeya-12-960.webp",
+          "srcSmall": "media/img/cosmos/gagarin-zakladyvaet-fundament-muzeya-12-480.webp"
+        },
+        "gagarin-i-kaluzhanin-teploe-rukopozhatie-14": {
+          "source": "Ролик 4 - А.Ю. Гагарин и К.Э. Циолковский\\Картинки\\Гагарин и калужанин_ тёплое рукопожатие-14.png",
+          "src": "media/img/cosmos/gagarin-i-kaluzhanin-teploe-rukopozhatie-14-960.webp",
+          "srcSmall": "media/img/cosmos/gagarin-i-kaluzhanin-teploe-rukopozhatie-14-480.webp"
+        },
+        "gagarin-smotrit-na-bumazhnuyu-kalugu-10": {
+          "source": "Ролик 4 - А.Ю. Гагарин и К.Э. Циолковский\\Картинки\\Гагарин смотрит на бумажную Калугу-10.png",
+          "src": "media/img/cosmos/gagarin-smotrit-na-bumazhnuyu-kalugu-10-960.webp",
+          "srcSmall": "media/img/cosmos/gagarin-smotrit-na-bumazhnuyu-kalugu-10-480.webp"
+        },
+        "gagarin-u-doma-tsiolkovskogo-15": {
+          "source": "Ролик 4 - А.Ю. Гагарин и К.Э. Циолковский\\Картинки\\Гагарин у дома Циолковского-15.png",
+          "src": "media/img/cosmos/gagarin-u-doma-tsiolkovskogo-15-960.webp",
+          "srcSmall": "media/img/cosmos/gagarin-u-doma-tsiolkovskogo-15-480.webp"
+        },
+        "gagarin-u-illyuminatora-v-bumazhnom-kosmolete-3": {
+          "source": "Ролик 4 - А.Ю. Гагарин и К.Э. Циолковский\\Картинки\\Гагарин у иллюминатора в бумажном космолёте-3.png",
+          "src": "media/img/cosmos/gagarin-u-illyuminatora-v-bumazhnom-kosmolete-3-960.webp",
+          "srcSmall": "media/img/cosmos/gagarin-u-illyuminatora-v-bumazhnom-kosmolete-3-480.webp"
+        },
+        "gagarin-ukladyvaet-pervyy-kamen-13": {
+          "source": "Ролик 4 - А.Ю. Гагарин и К.Э. Циолковский\\Картинки\\Гагарин укладывает первый камень-13.png",
+          "src": "media/img/cosmos/gagarin-ukladyvaet-pervyy-kamen-13-960.webp",
+          "srcSmall": "media/img/cosmos/gagarin-ukladyvaet-pervyy-kamen-13-480.webp"
+        },
+        "tsiolkovskiy-obyasnyaet-traektoriyu-u-doski-5": {
+          "source": "Ролик 4 - А.Ю. Гагарин и К.Э. Циолковский\\Картинки\\Циолковский объясняет траекторию у доски-5.png",
+          "src": "media/img/cosmos/tsiolkovskiy-obyasnyaet-traektoriyu-u-doski-5-960.webp",
+          "srcSmall": "media/img/cosmos/tsiolkovskiy-obyasnyaet-traektoriyu-u-doski-5-480.webp"
+        },
+        "tsiolkovskiy-u-okna-s-bumazhnoy-raketoy-7": {
+          "source": "Ролик 4 - А.Ю. Гагарин и К.Э. Циолковский\\Картинки\\Циолковский у окна с бумажной ракетой-7.png",
+          "src": "media/img/cosmos/tsiolkovskiy-u-okna-s-bumazhnoy-raketoy-7-960.webp",
+          "srcSmall": "media/img/cosmos/tsiolkovskiy-u-okna-s-bumazhnoy-raketoy-7-480.webp"
+        },
+        "yuriy-gagarin-sredi-vstrechayuschikh-gorozhan-11": {
+          "source": "Ролик 4 - А.Ю. Гагарин и К.Э. Циолковский\\Картинки\\Юрий Гагарин среди встречающих горожан-11.png",
+          "src": "media/img/cosmos/yuriy-gagarin-sredi-vstrechayuschikh-gorozhan-11-960.webp",
+          "srcSmall": "media/img/cosmos/yuriy-gagarin-sredi-vstrechayuschikh-gorozhan-11-480.webp"
+        }
+      }
+    }
+  }
+}
